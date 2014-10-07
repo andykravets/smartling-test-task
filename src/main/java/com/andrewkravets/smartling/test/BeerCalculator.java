@@ -9,7 +9,7 @@ public class BeerCalculator {
         if (bigBottleAmount > goalWithoutSmall) {
             return gotBeer(goalPints - smallBottles, 0, bigBottles - 1);
         } else {
-            return goalWithoutSmall - bigBottleAmount == 0;
+            return goalWithoutSmall <= 0 || goalWithoutSmall - bigBottleAmount == 0;
         }
     }
 }
